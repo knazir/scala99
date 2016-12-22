@@ -96,8 +96,9 @@ object Main {
       val choice = getUserChoice(ProblemTypes)
 
       choice match {
-        case 1 => showListsProblems()
-        case _ => println(s"Invalid choice.")
+        case 1        => showListsProblems()
+        case Sentinel => break
+        case _        => println(s"Invalid choice.")
       }
     }
   }
