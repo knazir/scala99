@@ -4,12 +4,10 @@ import scala.util.control.Breaks._
 import scala.reflect.runtime.{universe => ru}
 
 object Main {
-
+  /* Settings */
   val Sentinel = -1
 
-
   /* Question lists */
-
   val ProblemTypes = List((1, "Lists"), (2, "Arithmetic"), (3, "Binary Trees"), (4, "Multiway Trees"), (5, "Graphs"),
     (6, "Miscellaneous"))
   val ListProblems = List((1, "Last Element"), (2, "Penultimate Element"), (3, "K-th Element"), (4, "List Size"),
@@ -17,7 +15,6 @@ object Main {
 
 
   /* Choosing and running problems */
-
   def printOptions(options: List[(Int, String)]) : Unit = {
     options.foreach(q => println(s"${q._1} - ${q._2}"))
   }
@@ -56,7 +53,6 @@ object Main {
 
 
   /* List problems */
-
   def toInferredType(element: String) : Any = {
     val integer = Try(element.toInt)
     if (integer.isSuccess) return integer.get
@@ -89,7 +85,6 @@ object Main {
 
 
   /* Main function */
-
   def main(args: Array[String]) : Unit = {
     showGreeting()
     breakable {
