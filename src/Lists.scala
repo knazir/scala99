@@ -3,7 +3,7 @@ import scala.util.control.Breaks._
 
 object Lists {
 
-  /* List helper functions */
+  /* List helper methods */
 
   def getKValue(list: List[Any]) : Int = {
     println("Enter value for k:")

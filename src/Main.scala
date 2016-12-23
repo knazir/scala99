@@ -84,7 +84,7 @@ object Main {
   }
 
 
-  /* Main function */
+  /* Main method */
   def main(args: Array[String]) : Unit = {
     showGreeting()
     breakable {
